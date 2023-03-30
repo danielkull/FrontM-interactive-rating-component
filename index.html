@@ -16,30 +16,55 @@
 
 <body>
 
-  <!-- Rating state start -->
+  <main>
+    <!-- Rating state start -->
+    <form>
 
-  How did we do?
+      <img src="images/icon-star.svg" alt="Orange star icon">
 
-  Please let us know how we did with your support request. All feedback is appreciated
-  to help us improve our offering!
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!</p>
+      <!-- Beginn of customer rating choices -->
+      <label for="one-points">1
+        <input type="checkbox" name="one-points" id="one-points">
+      </label>
 
-  1 2 3 4 5
+      <label for="two-points">2
+        <input type="checkbox" name="two-points" id="two-points">
+      </label>
 
-  Submit
+      <label for="three-points">3
+        <input type="checkbox" name="three-points" id="three-points">
+      </label>
 
-  <!-- Rating state end -->
+      <label for="four-points">4
+        <input type="checkbox" name="four-points" id="four-points">
+      </label>
 
-  <!-- Thank you state start -->
+      <label for="five-points">5
+        <input type="checkbox" name="five-points" id="five-points">
+      </label>
+      <!-- End of customer rating choices -->
 
-  You selected <!-- Add rating here --> out of 5
+      <button class="btn-submit">Submit</button>
 
-  Thank you!
+    </form>
+    <!-- Rating state end -->
+    <!-- Thank you state start -->
+    <section>
 
-  We appreciate you taking the time to give a rating. If you ever need more support,
-  don’t hesitate to get in touch!
+      <img src="images/illustration-thank-you.svg" alt="Data was recived icon">
+      <!-- Add rating here -->
+      <p>You selected <span class="customer-rating"></span> out of 5</p>
 
-  <!-- Thank you state end -->
+      <h2>Thank you!</h2>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!</p>
 
+    </section>
+    <!-- Thank you state end -->
+  </main>
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
