@@ -16,8 +16,6 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -31,15 +29,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Rating Desktop Solution](images/desktop-solution-rating.png)
+![Thank you Desktop Solution](images/desktop-solution-thank-you.png)
+![Rating Mobile Solution](images/mobile-solution-rating.png)
+![Thank you Solution](images/mobile-solution-thank-you.png)
+![Rating Mobile-rotate-viewport Solution](images/mobile-rotate-viewport-solution-rating.png)
+![Thank you Mobile-rotate-viewport Solution](images/mobile-rotate-viewport-solution-thank-you.png)
 
 ### Links
 
@@ -54,51 +49,57 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- @media screen for breakpoints
+- JS DOM
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+Using shadow inside of a button to give the user a feeling when it's activated.
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.btn-submit:active {
+  box-shadow: inset 0 0 5px var(--dark-blue);
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+To use min or max-width/height in different ways to define a tile with it's content, but also make sure that the tiles look the same, without content loss.
+
+```css
+.content-tiles {
+  display: grid;
+  place-content: center;
+  padding: 2rem 1rem;
+  gap: 1.5rem;
+
+  max-width: min-content;
+  min-height: 25rem;
+}
+
+p {
+  min-width: 31ch;
+}
+
+.rating-response {
+  min-width: fit-content;
+}
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+Creating an array from a selected html element with css selector like structure(like here with input elements in the wrapper-rating), to then work with it.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```js
+const inputList = Array.from(
+  document.querySelectorAll(".wrapper-rating input")
+);
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I want to focus more on placement of the html content with css. And also want to increase the html semantic knowledge about forms and its respective elements.
+In addition working more with input and label elements witht the help of the CSS Tricks article (See Useful resources).
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [CSS Tricks: HTML Inputs and Labels: A Love Story](https://css-tricks.com/html-inputs-and-labels-a-love-story/) - This helped me a lot to understand the interaction between input and label elements and gave me the push to overthink my html structure.
 
 ## Author
 
@@ -107,6 +108,5 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+My thanks goes again to the Coding-bootcamps-eu, it's teachers and fellow students.
+Also a special thanks to Amber Wilson's article, about Inputs and Labels on CSS Tricks, which gave me a deeper understanding.

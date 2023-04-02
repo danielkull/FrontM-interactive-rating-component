@@ -4,12 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Interactive rating component</title>
-
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -18,7 +15,7 @@
 
   <main>
     <!-- Rating state start -->
-    <form>
+    <section class="content-tiles rating-tile">
 
       <img src="images/icon-star.svg" alt="Orange star icon">
 
@@ -26,37 +23,37 @@
       <p>Please let us know how we did with your support request. All feedback is appreciated
         to help us improve our offering!</p>
       <!-- Beginn of customer rating choices -->
-      <label for="one-points">1
-        <input type="checkbox" name="one-points" id="one-points">
-      </label>
+      <form class="wrapper-rating">
 
-      <label for="two-points">2
-        <input type="checkbox" name="two-points" id="two-points">
-      </label>
+        <input type="radio" name="rating" id="one-points">
+        <label for="one-points">1</label>
 
-      <label for="three-points">3
-        <input type="checkbox" name="three-points" id="three-points">
-      </label>
+        <input type="radio" name="rating" id="two-points">
+        <label for="two-points">2</label>
 
-      <label for="four-points">4
-        <input type="checkbox" name="four-points" id="four-points">
-      </label>
+        <input type="radio" name="rating" id="three-points">
+        <label for="three-points">3</label>
 
-      <label for="five-points">5
-        <input type="checkbox" name="five-points" id="five-points">
-      </label>
+        <input type="radio" name="rating" id="four-points">
+        <label for="four-points">4</label>
+
+        <input type="radio" name="rating" id="five-points">
+        <label for="five-points">5</label>
+
+      </form>
       <!-- End of customer rating choices -->
 
       <button class="btn-submit">Submit</button>
 
-    </form>
+    </section>
     <!-- Rating state end -->
+
     <!-- Thank you state start -->
-    <section>
+    <section class="content-tiles thank-you-tile">
 
       <img src="images/illustration-thank-you.svg" alt="Data was recived icon">
-      <!-- Add rating here -->
-      <p>You selected <span class="customer-rating"></span> out of 5</p>
+
+      <p class="rating-response">You selected <span class="customer-rating"></span> out of 5</p>
 
       <h2>Thank you!</h2>
       <p>We appreciate you taking the time to give a rating. If you ever need more support,
@@ -68,7 +65,7 @@
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/danielkull" target="_blank">Daniel Kull</a>.
   </footer>
 
   <script src="script.js"></script>
