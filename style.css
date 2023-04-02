@@ -1,5 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+:root {
+  /* Color Custom Properties */
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --button-bgc: hsl(213, 19%, 24%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  display: grid;
+}
+
+main {
+  margin-top: auto;
+  display: grid;
+  place-content: center;
+}
+
+h1,
+h2 {
+  color: var(--white);
+}
+
+p {
+  font-size: 15px;
+  color: var(--light-grey);
+  min-width: 31ch;
+  line-height: 1.4rem;
+}
+
+.content-tiles {
+  background-color: var(--dark-blue);
+  display: grid;
+  place-content: center;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  max-width: min-content;
+  min-height: 25rem;
+  gap: 1.5rem;
+}
+
+.rating-tile > img {
+  background-color: var(--button-bgc);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+/* Spreads the rating elements equaly in the tile*/
+.wrapper-rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===Start: Styles the rating radio buttons=== */
+label {
+  display: grid;
+  place-content: center;
+  color: var(--light-grey);
+  background-color: var(--button-bgc);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label,
+input[type="radio"]:focus + label {
+  background-color: var(--medium-grey);
+  color: var(--white);
+}
+
+label:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+/* Removes all CSS from checkboxes, labels are taking care of it */
+input[type="radio"] {
+  all: unset;
+}
+
+/* ===End: Styles the rating radio buttons=== */
+
+.thank-you-tile {
+  justify-items: center;
+  display: none;
+}
+
+.thank-you-tile p {
+  text-align: center;
+}
+
+.rating-response {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-color: var(--button-bgc);
+  color: var(--orange);
+  min-width: fit-content;
+}
+
+.btn-submit {
+  background-color: var(--orange);
+  color: var(--white);
+  font-weight: 700;
+  padding: 1rem;
+  border: 0px solid transparent;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.btn-submit:active {
+  box-shadow: inset 0 0 5px var(--dark-blue);
+}
+
+footer {
+  margin-top: auto;
+  padding: 2rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
-  color: hsl(228, 45%, 44%);
+  color: lightblue;
+}
+
+.attribution a,
+.attribution a:link {
+  color: var(--orange);
+}
+
+
+a:visited {
+  color: aqua;
+  font-size: 15rem;
+  font-weight: bolder;
+}
+
+.attribution a:hover {
+  transition: color 300ms;
+  color: var(--white);
+}
+
+.attribution a:active {
+  color: violet;
+}
+
+
+@media screen and (min-width: 376px) {
+  p {
+    min-width: 35ch;
+  }
+}
+
+@media screen and (max-height: 434px) {
+  body {
+    place-content: center;
+  }
+
+  main {
+    margin-top: 0;
+  }
+
+  footer {
+    padding: 0;
+    padding-top: 0.5rem;
+  }
+
+  .content-tiles {
+    min-height: 0;
+    gap: 0.6rem;
+  }
 }
