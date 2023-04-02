@@ -54,10 +54,6 @@ Users should be able to:
 
 ### What I learned
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
 Using shadow inside of a button to give the user a feeling when it's activated.
 
 ```css
